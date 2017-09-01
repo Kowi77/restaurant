@@ -12,7 +12,7 @@ import java.util.List;
 public class Restaurant {
 
     @Id
-    @Column(name = "restId")
+    @Column(name = "id")
     @GeneratedValue
     @NotNull
     private Integer id;
@@ -21,15 +21,11 @@ public class Restaurant {
     @NotNull
     private String name;
 
-   /* @OneToMany(fetch = FetchType.LAZY)
-    @NotNull
-    @JoinColumn(name = "dishId")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
     private List<Dish> dishesForLunch;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @NotNull
-    @JoinColumn(name = "userId")
-    private List<RegularUser> votedUsers;*/
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
+    private List<RegularUser> votedUsers;
 
     public Restaurant(String name) {
         this.name = name;

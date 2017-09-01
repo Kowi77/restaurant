@@ -28,9 +28,9 @@ public class Dish {
     @JoinColumn(name = "restId")
     private Restaurant restaurant;
 
-    public Dish(int price, String description, Restaurant restaurant) {
-        this.price = price;
+    public Dish( String description, int price, Restaurant restaurant) {
         this.description = description;
+        this.price = price;
         this.restaurant = restaurant;
     }
 

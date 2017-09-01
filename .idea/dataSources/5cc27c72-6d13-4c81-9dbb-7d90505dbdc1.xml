@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-08-08.17:33:28.299</IntrospectionTimestamp>
-      <IntrospectionStateNumber>4284</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-08-27.18:45:23.796</IntrospectionTimestamp>
+      <IntrospectionStateNumber>16805</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -30,86 +30,86 @@
       <ObjectId>11585</ObjectId>
     </schema>
     <sequence id="9" parent="3" name="global_seq">
-      <ObjectId>20879</ObjectId>
-      <StateNumber>4281</StateNumber>
+      <ObjectId>49226</ObjectId>
+      <StateNumber>16802</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
     </sequence>
     <table id="10" parent="3" name="dishes">
-      <ObjectId>20890</ObjectId>
-      <StateNumber>4283</StateNumber>
+      <ObjectId>49237</ObjectId>
+      <StateNumber>16804</StateNumber>
     </table>
     <table id="11" parent="3" name="restaurants">
-      <ObjectId>20881</ObjectId>
-      <StateNumber>4284</StateNumber>
+      <ObjectId>49228</ObjectId>
+      <StateNumber>16805</StateNumber>
     </table>
     <table id="12" parent="3" name="users">
-      <ObjectId>20904</ObjectId>
-      <StateNumber>4284</StateNumber>
+      <ObjectId>49251</ObjectId>
+      <StateNumber>16805</StateNumber>
     </table>
     <column id="13" parent="10" name="dishid">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4283</StateNumber>
+      <StateNumber>16804</StateNumber>
       <DefaultExpression>nextval(&apos;global_seq&apos;::regclass)</DefaultExpression>
     </column>
     <column id="14" parent="10" name="description">
       <Position>2</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4283</StateNumber>
+      <StateNumber>16804</StateNumber>
     </column>
     <column id="15" parent="10" name="price">
       <Position>3</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4283</StateNumber>
+      <StateNumber>16804</StateNumber>
     </column>
     <column id="16" parent="10" name="restid">
       <Position>4</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>4283</StateNumber>
+      <StateNumber>16804</StateNumber>
     </column>
     <index id="17" parent="10" name="dishes_pkey">
-      <ObjectId>20897</ObjectId>
+      <ObjectId>49244</ObjectId>
       <ColNames>dishid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="18" parent="10" name="dishes_pkey">
-      <ObjectId>20898</ObjectId>
+      <ObjectId>49245</ObjectId>
       <ColNames>dishid</ColNames>
       <UnderlyingIndexName>dishes_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="19" parent="10" name="dishes_restid_fkey">
-      <ObjectId>20899</ObjectId>
+      <ObjectId>49246</ObjectId>
       <ColNames>restid</ColNames>
       <RefTableName>restaurants</RefTableName>
       <RefKeyName>restaurants_pkey</RefKeyName>
-      <RefColNames>restid</RefColNames>
+      <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="20" parent="11" name="restid">
+    <column id="20" parent="11" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4282</StateNumber>
+      <StateNumber>16803</StateNumber>
       <DefaultExpression>nextval(&apos;global_seq&apos;::regclass)</DefaultExpression>
     </column>
     <column id="21" parent="11" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4282</StateNumber>
+      <StateNumber>16803</StateNumber>
     </column>
     <index id="22" parent="11" name="restaurants_pkey">
-      <ObjectId>20888</ObjectId>
-      <ColNames>restid</ColNames>
+      <ObjectId>49235</ObjectId>
+      <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="23" parent="11" name="restaurants_pkey">
-      <ObjectId>20889</ObjectId>
-      <ColNames>restid</ColNames>
+      <ObjectId>49236</ObjectId>
+      <ColNames>id</ColNames>
       <UnderlyingIndexName>restaurants_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
@@ -117,37 +117,37 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4284</StateNumber>
+      <StateNumber>16805</StateNumber>
       <DefaultExpression>nextval(&apos;global_seq&apos;::regclass)</DefaultExpression>
     </column>
     <column id="25" parent="12" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4284</StateNumber>
+      <StateNumber>16805</StateNumber>
     </column>
     <column id="26" parent="12" name="restid">
       <Position>3</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>4284</StateNumber>
+      <StateNumber>16805</StateNumber>
     </column>
     <index id="27" parent="12" name="users_pkey">
-      <ObjectId>20911</ObjectId>
+      <ObjectId>49258</ObjectId>
       <ColNames>userid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="28" parent="12" name="users_pkey">
-      <ObjectId>20912</ObjectId>
+      <ObjectId>49259</ObjectId>
       <ColNames>userid</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="29" parent="12" name="users_restid_fkey">
-      <ObjectId>20913</ObjectId>
+      <ObjectId>49260</ObjectId>
       <ColNames>restid</ColNames>
       <RefTableName>restaurants</RefTableName>
       <RefKeyName>restaurants_pkey</RefKeyName>
-      <RefColNames>restid</RefColNames>
+      <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>

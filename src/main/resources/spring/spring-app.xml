@@ -11,6 +11,6 @@
 
     <context:component-scan base-package="main.**.model"/>
 
-    <context:component-scan base-package="main.**.controller"/>
+    <context:component-scan base-package="main.**.web"/>
 
 </beans>
